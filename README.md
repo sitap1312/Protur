@@ -78,19 +78,19 @@ TripConvoy is social media web application, where user can customise their Posts
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Working with Backend Ruby-Rails | H | 3hrs| 2hrs | hrs |
-| Working with frontend React | H | 3hrs | 4hrs | hrs |
-| CRUD Backend | H | 2hrs | 0.5hrs | hrs |
-| CRUD Frontend | H | 2hrs | 0.5hrs | hrs |
-| Creating basic structure| H | 3hrs| 4rs | hrs |
-| Components | H | 6hrs | 3hrs | hrs |
-| CSS Styling | H | 6hrs | 7hrs | hrs |
-| Navigations | H | 3hrs | 1.5hrs | hrs |
-| Responsive web desiging | H | 5hrs | 8hrs | hrs |
-| Advance CSS Styling | H | 6hrs | 7hrs | hrs |
-| PMVP Styling | H | 2hr | 2hrs | hrs |
-| Review of Functionality | H | 3hrs | 1hrs | hrs |
-| Total | H | 43hrs| 40hrs | 40hrs |
+| Working with Backend Ruby-Rails | H | 3hrs| hrs | hrs |
+| Working with frontend React | H | 5hrs | hrs | hrs |
+| CRUD Backend | H | 3hrs | hrs | hrs |
+| CRUD Frontend | H | 5hrs | hrs | hrs |
+| Creating basic structure| H | 3hrs| hrs | hrs |
+| Components | H | 3hrs | hrs | hrs |
+| Navigations | H | 3hrs | hrs | hrs |
+| CSS Styling | H | 6hrs | hrs | hrs |
+| Responsive web desiging | H | 5hrs | hrs | hrs |
+| Advance CSS Styling | H | 6hrs | hrs | hrs |
+| PMVP Styling | H | 3hr | hrs | hrs |
+| Review of Functionality | H | 3hrs | hrs | hrs |
+| Total | H | 48hrs| hrs | hrs |
 
 ## Code Snippet
 
