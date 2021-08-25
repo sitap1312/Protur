@@ -147,7 +147,7 @@ src
 
 ## ERD
 
-![Screen Shot 2021-08-25 at 8 08 27 AM](https://user-images.githubusercontent.com/85080279/130816359-72dc6b6c-b3e2-489a-9816-96a05bf1b5db.png)
+![Screen Shot 2021-08-25 at 11 20 22 AM](https://user-images.githubusercontent.com/85080279/130844487-9a2b6641-bca6-4886-a366-86c3d3f1c7bc.png)
 
 
 ## PostMVP  
