@@ -27,7 +27,7 @@ Protur is social media web application, where user can customise their Posts abo
 
 ## Components-tree
 
-![Screen Shot 2021-08-25 at 8 08 50 AM](https://user-images.githubusercontent.com/85080279/130816423-3a82181c-157d-43c6-ba66-7f7215e98943.png)
+![Screen Shot 2021-08-25 at 8 13 42 AM](https://user-images.githubusercontent.com/85080279/130817218-bbe498df-b248-442e-a718-243e686f329c.png)
 
 
 ### MVP/PostMVP
