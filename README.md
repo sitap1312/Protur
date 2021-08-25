@@ -1,15 +1,15 @@
-# TripConvoy
+# Protur
 
-** https://github.com/sitap1312/TripConvoy **
+** https://github.com/sitap1312/Protur **
 ** **
 
 ## Project Name
 
-TripConvoy
+Protur
 
 ## Project Overview
  
-TripConvoy is social media web application, where user can customise their Posts about their Travel(Tours and Trips around the world) with the images of the places. User can perform CRUD operations only after signing-Up/signing-In. The main purpose of this app is users can explore different places and get more info about them before they visit, kind of a Travel guide.
+Protur is social media web application, where user can customise their Posts about their Travel(Tours and Trips around the world) with the images of the places. User can perform CRUD operations only after signing-Up/signing-In. The main purpose of this app is users can explore different places and get more info about them before they visit, kind of a Travel guide.
 
 ## Data Sample:
  
@@ -19,16 +19,15 @@ TripConvoy is social media web application, where user can customise their Posts
 
 ## Wireframes
 
-![Screen Shot 2021-08-24 at 10 05 01 PM](https://user-images.githubusercontent.com/85080279/130729741-7aae1967-fdb1-4ea8-aba9-80bceaa369b6.png)
+![Screen Shot 2021-08-25 at 8 07 44 AM](https://user-images.githubusercontent.com/85080279/130816235-af08cc45-d75e-4af6-bdc7-a456b7df1c8b.png)
 
-## Database-Tables
+## ERD
 
-![Screen Shot 2021-08-24 at 10 05 29 PM](https://user-images.githubusercontent.com/85080279/130729780-363b729c-d930-460e-8b47-e34aecd6e945.png)
+![Screen Shot 2021-08-25 at 8 08 27 AM](https://user-images.githubusercontent.com/85080279/130816359-72dc6b6c-b3e2-489a-9816-96a05bf1b5db.png)
 
 ## Components-tree
 
-![Screen Shot 2021-08-24 at 10 05 54 PM](https://user-images.githubusercontent.com/85080279/130729824-9a366a8f-2cae-4b0a-993d-b966b4c1aa45.png)
-
+![Screen Shot 2021-08-25 at 8 08 50 AM](https://user-images.githubusercontent.com/85080279/130816423-3a82181c-157d-43c6-ba66-7f7215e98943.png)
 
 
 ### MVP/PostMVP
@@ -43,22 +42,23 @@ TripConvoy is social media web application, where user can customise their Posts
 - Consume data from your own API
 - Authentication on front-end
 - Authentication on back-end
+- CRUD on Reviews and Ratings
+- CRUD on User Posts
+- User comments
 - Styled with CSS
 - Use flexbox or CSS Grid
 - implement responsive deign on 2 screen sizes
 - Users can create accounts
-- Users can create, edit and delete posts after signing in
 - Users can see other users posts
 - Deploy the back-end via Heroku
 - Delopy app via Netlify
 
 ## PostMVP  
 
-- Allow user to comment on posts.
+- Allow user to like on posts.
 - Allow user to scroll back to the top of the page by single click.
 - Search function
 - Advance CSS
-- Like/Dislike buttons
 
 ## Project Schedule
 
