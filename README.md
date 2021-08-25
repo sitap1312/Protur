@@ -1,6 +1,6 @@
 # TripConvoy
 
-** https://sitap1312.github.io/TourHut/ **
+** https://github.com/sitap1312/TripConvoy **
 ** **
 
 ## Project Name
@@ -29,10 +29,11 @@ TripConvoy is social media web application, where user can customise their Posts
 
 ![Screen Shot 2021-08-24 at 10 05 54 PM](https://user-images.githubusercontent.com/85080279/130729824-9a366a8f-2cae-4b0a-993d-b966b4c1aa45.png)
 
+
+
 ### MVP/PostMVP
   
-
-#### MVP 
+## MVP 
 
 - Have a working, interactive React app
 - Have a full CRUD backend using Ruby-Rails
@@ -51,7 +52,7 @@ TripConvoy is social media web application, where user can customise their Posts
 - Deploy the back-end via Heroku
 - Delopy app via Netlify
 
-#### PostMVP  
+## PostMVP  
 
 - Allow user to comment on posts.
 - Allow user to scroll back to the top of the page by single click.
