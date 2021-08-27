@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const Layout = (props) => {
+function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
     <header>
@@ -13,15 +13,17 @@ export const Layout = (props) => {
         </div>
       ) : (
         <Link to='/login'>Login/Register</Link>
-      )};
+      )}
       <hr />
       {currentUser && (
         <div>
-          <Link to='/posts'>Foods</Link>
-          <Link to='/comments'>Flavors</Link>
+          <Link to='/posts'>Posts</Link>
+          <Link to='/comments'>Comments</Link>
         </div>
       )}
       {props.children}
     </header>
   );
 };
+
+export default Layout;

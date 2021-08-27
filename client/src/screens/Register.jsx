@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-export const Register = (props) => {
+function Register(props) {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -30,7 +30,7 @@ export const Register = (props) => {
 
       <label>
         Email:
-        <input type='text' name='email' value={formData.email} onChange={handleChange} />
+        <input type='email' name='email' value={formData.email} onChange={handleChange} />
       </label>
 
       <br />
@@ -46,3 +46,5 @@ export const Register = (props) => {
     </form>
   )
 };
+
+export default Register;

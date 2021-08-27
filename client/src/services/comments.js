@@ -30,7 +30,7 @@ export const deleteComments = async (id) => {
   return resp.data;
 }
 
-// export const addCommentToPost = async (postId, commentId) => {
-//   const resp = await api.get(`/posts/${postId}/comments/${commentId}`);
-//   return resp.data;
-// }
+export const addCommentToPost = async (postId, commentId) => {
+  const resp = await api.get(`/posts/${postId}/comments/${commentId}`);
+  return resp.data;
+}
