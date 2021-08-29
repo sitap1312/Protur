@@ -27,10 +27,8 @@ Protur is social media web application, where user can customise their Posts abo
 - Have working genereic controller actions for backend
 - Have at least 6 rendered components 
 - Use only React DOM Manipulation
-- Consume data from your own API
 - Authentication on front-end
 - Authentication on back-end
-- CRUD on Reviews and Ratings
 - CRUD on User Posts
 - User comments
 - Styled with CSS
@@ -113,10 +111,10 @@ src
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Aug 25| Priority Matrix, Wireframes, Project Approval | In-Complete
-|Aug 26| Core Application Structure | In-Complete
-|Aug 27| Actual code | In-Complete
-|Aug 28| MVP  | In-Complete
+|Aug 25| Priority Matrix, Wireframes, Project Approval | Complete
+|Aug 26| Core Application Structure | Complete
+|Aug 27| Actual code | Complete
+|Aug 28| MVP  | Complete
 |Aug 29| CSS Styling | In-Complete
 |Aug 30| PMVP and advance styling  | In-Complete
 |Aug 31| Advance Styling, PMVP| In-Complete
@@ -162,10 +160,48 @@ src
 ## Code Snippet
 
 ```
+<header>
+      <Link to='/'>
+        <h1>Protur</h1>
+      </Link>
 
+      <Link to='/register'>Register</Link>
+      
+      {currentUser ? (
+        <div>
+          <Link to='/'>
+            <p>{currentUser.username}</p>
+          </Link>
+          
+          <button onClick={handleLogout}>Logout</button>
+        </div>
+      ) : (
+          <Link to='/login'>Login</Link>
+        )}
+      <hr />
+      {currentUser && (
+        <div>
+          <Link to='/posts'>Posts</Link>
+          {/* <Link to='/comments'>Comments</Link> */}
+        </div>
+      )}
+      {props.children}
+</header>
+    
 ```
 
 ## Change Log
  ```
+Rails.application.routes.draw do
+  # resources :comments, only: :index 
+  resources :posts do
+    resources :comments, only: :create
+  end
+  resources :users, only: :create
+
+  post '/auth/login', to: 'authentication#login'
+  get '/auth/verify', to: 'authentication#verify'
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+end
 
  ```
