@@ -11,12 +11,6 @@ Protur
  
 Protur is social media web application, where user can customise their Posts about their Travel(Tours and Trips around the world) with the images of the places. User can perform CRUD operations only after signing-Up/signing-In. The main purpose of this app is users can explore different places and get more info about them before they visit, kind of a Travel guide.
 
-## Data Sample:
- 
-```
-
-```
-
 
 ### MVP/PostMVP
   
