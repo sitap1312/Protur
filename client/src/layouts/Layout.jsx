@@ -5,20 +5,28 @@ function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
     <header>
-      <h1>Protur</h1>
+      <Link to='/'>
+        <h1>Protur</h1>
+      </Link>
+
+      <Link to='/register'>Register</Link>
+      
       {currentUser ? (
         <div>
-          <p>{currentUser.username}</p>
+          <Link to='/'>
+            <p>{currentUser.username}</p>
+          </Link>
+          
           <button onClick={handleLogout}>Logout</button>
         </div>
       ) : (
-        <Link to='/login'>Login/Register</Link>
-      )}
+          <Link to='/login'>Login</Link>
+        )}
       <hr />
       {currentUser && (
         <div>
           <Link to='/posts'>Posts</Link>
-          <Link to='/comments'>Comments</Link>
+          {/* <Link to='/comments'>Comments</Link> */}
         </div>
       )}
       {props.children}

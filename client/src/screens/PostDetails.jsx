@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getOnePost } from '../services/posts';
-import { getAllComments } from '../services/comments';
+import { createComments, getAllComments } from '../services/comments';
+import CommentsCreate from '../components/CommentsCreate';
 
 
 function PostDetails(props) {
   const [post, setPost] = useState(null);
-  const [postComments, setPostComments] = useState('');
+  const [ postComments, setPostComments ] = useState('');
 
   const { id } = useParams();
+  const { currentUser, handleDelete } = props;
   // const { posts } = props;
 
   useEffect(() => {
@@ -27,17 +29,37 @@ function PostDetails(props) {
     fetchComment();
   }, []);
 
+  const handleCommentCreate = async (commentData) => {
+    const newComment = await createComments(id, commentData);
+    setPost((prevState) => ({
+      ...prevState,
+      comments: [...prevState.comments, newComment]
+    }))
+  }
 
   return (
     <div>
       <div>
-        <h3>{post.placename}</h3>
-        <img src={post.img_url} />
-        <p>{post.description}</p>
+        <h3>{post?.placename}</h3>
+        <img src={post?.img_url} alt={post?.placename}/>
+        <p>{post?.description}</p>
+
+        {currentUser?.id === post?.user_id && (
+            <div>
+              <Link to={`/posts/${post?.id}/edit`}>
+                <button>Edit Post</button>
+              </Link>
+
+              <button onClick={() => handleDelete(post.id)}>Delete Post</button>
+            </div>
+          )}
       </div>
-      {/* <div>
-        <h5>{postComments.content}</h5>
-      </div> */}
+      <div>
+        {post?.comments.map((comment) => (
+          <p key={comment.id}>{ comment.content }</p>
+        ))}
+      </div>
+      <CommentsCreate handleCommentCreate={handleCommentCreate} />
     </div>
   )
 };

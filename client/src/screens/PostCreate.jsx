@@ -20,7 +20,7 @@ function PostCreate(props) {
 
   return (
     <form onSubmit={(e) => { e.preventDefault(); handleCreate(postForm); }} >
-      <h3>Create Food</h3>
+      <h3>Create New Post</h3>
       <label>
         PlaceName:
         <input type='text' name='placename' value={placename} onChange={handleChange} />

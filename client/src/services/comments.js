@@ -13,8 +13,8 @@ export const getComment = async (id) => {
 }
 
 // Create comment
-export const createComments = async (input) => {
-  const resp = await api.post('/comments', input);
+export const createComments = async (postId, input) => {
+  const resp = await api.post(`/posts/${postId}/comments`, input);
   return resp.data;
 }
 
@@ -30,7 +30,7 @@ export const deleteComments = async (id) => {
   return resp.data;
 }
 
-export const addCommentToPost = async (postId, commentId) => {
-  const resp = await api.get(`/posts/${postId}/comments/${commentId}`);
-  return resp.data;
-}
+// export const addCommentToPost = async (postId, commentId) => {
+//   const resp = await api.get(`/posts/${postId}/comments/${commentId}`);
+//   return resp.data;
+// }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Register(props) {
   const [formData, setFormData] = useState({
@@ -41,6 +42,8 @@ function Register(props) {
       </label>
 
       <br />
+
+      <Link to='/login'>Login</Link>
 
       <button>Submit</button>
     </form>

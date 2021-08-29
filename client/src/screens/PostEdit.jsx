@@ -14,7 +14,7 @@ function PostEdit(props) {
   useEffect(() => {
     const prefillFormData = () => {
       const post = posts.find((post) => post.id === Number(id));
-      setPostForm({placename: post.placename})
+      setPostForm({placename: post?.placename, img_url: post?.img_url, description: post?.description })
     }
     if (posts.length) {
       prefillFormData()
@@ -46,7 +46,7 @@ function PostEdit(props) {
 
       <label>
         Description:
-        <textarea rows="5" cols="50" name="description" value={postForm.placename} onChange={handleChange}>
+        <textarea rows="5" cols="50" name="description" value={postForm.description} onChange={handleChange}>
           Description...
         </textarea>
       </label>

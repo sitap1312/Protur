@@ -6,6 +6,7 @@ import PostEdit from '../screens/PostEdit';
 import PostCreate from '../screens/PostCreate';
 import PostDetails from '../screens/PostDetails';
 import Posts from '../screens/Posts';
+// import Comments from '../screens/Comments';
 
 function MainContainer(props) {
   const [posts, setPosts] = useState([]);
@@ -32,7 +33,7 @@ function MainContainer(props) {
 
   const handleCreate = async (postForm) => {
     const postData = await createPost(postForm);
-    setPosts((prevState) => [...prevState, postForm]);
+    setPosts((prevState) => [...prevState, postData]);
     history.push('/posts');
   };
 
@@ -46,7 +47,8 @@ function MainContainer(props) {
 
   const handleDelete = async (id) => {
     await deletePost(id);
-    setPosts((prevState) => prevState.filter((post) => post.id !== id));
+    setPosts((prevState) => prevState.filter((post) => post?.id !== id));
+    history.push('/posts');
   };
 
 
@@ -54,7 +56,7 @@ function MainContainer(props) {
     <div>
       <Switch>
 
-        {/* <Route path='/comments'>
+        {/* <Route path='/posts/:id'>
           <Comments comments={comments} />
         </Route> */}
 
@@ -67,11 +69,11 @@ function MainContainer(props) {
         </Route>
 
         <Route path='/posts/:id'>
-          <PostDetails posts={posts} />
+          <PostDetails posts={posts} handleDelete={handleDelete} currentUser={currentUser} />
         </Route>
 
         <Route path='/posts'>
-          <Posts posts={posts} handleDelete={handleDelete} currentUser={currentUser} />
+          <Posts posts={posts} />
         </Route>
 
       </Switch>
