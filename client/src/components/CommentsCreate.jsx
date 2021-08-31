@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// import { Comments } from '../screens/Comments'
 
 function CommentsCreate(props) {
   const [commentData, setCommentData] = useState({

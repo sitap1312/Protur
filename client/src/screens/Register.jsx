@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Login.css';
 
 function Register(props) {
   const [formData, setFormData] = useState({
@@ -19,34 +20,40 @@ function Register(props) {
   };
 
   return (
-    <form onSubmit={(e) => { e.preventDefault(); handleRegister(formData); }}>
-      <h3>Register</h3>
+    <section className="sign-page">
+      <div className="sign-form">
 
-      <label>
-        Username:
-        <input type='text' name='username' value={formData.username} onChange={handleChange} />
-      </label>
+        <div className="sign-title">REGISTER</div>
+        <br />
+        <br />
+        
+        <form onSubmit={(e) => { e.preventDefault(); handleRegister(formData); }}>
 
-      <br />
+          <input className="sign-input" type='text' name='username' value={formData.username} onChange={handleChange} placeholder="username" />
+          <br />
+          <br />
 
-      <label>
-        Email:
-        <input type='email' name='email' value={formData.email} onChange={handleChange} />
-      </label>
+          <input className="sign-input" type='email' name='email' value={formData.email} onChange={handleChange} placeholder="✉ useremail@email.com" />
+          <br />
+          <br />
 
-      <br />
+          <input className="sign-input" type='password' name='password' value={formData.password} onChange={handleChange} placeholder="🔐 ••••••••••••" />
+          <br />
+          <br />
 
-      <label>
-        Password:
-        <input type='password' name='password' value={formData.password} onChange={handleChange} />
-      </label>
+          <div>
+            <button className="sign-btn" type="submit">SIGN UP</button>
+          </div>
+          <br />
+          <br />
 
-      <br />
-
-      <Link to='/login'>Login</Link>
-
-      <button>Submit</button>
-    </form>
+          <div className="sign-text"> Already have an Account.!
+            <Link to='/login' className="sign-link">Login</Link>
+          </div>
+          
+          </form>
+        </div>
+      </section>
   )
 };
 

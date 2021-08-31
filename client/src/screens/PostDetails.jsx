@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { getOnePost } from '../services/posts';
 import { createComments, getAllComments } from '../services/comments';
 import CommentsCreate from '../components/CommentsCreate';
+import './PostDetails.css';
 
 
 function PostDetails(props) {
@@ -11,7 +12,6 @@ function PostDetails(props) {
 
   const { id } = useParams();
   const { currentUser, handleDelete } = props;
-  // const { posts } = props;
 
   useEffect(() => {
     const fetchPost = async () => {

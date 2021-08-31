@@ -7,6 +7,7 @@ import Login from './screens/Login';
 import Register from './screens/Register';
 import { loginUser, registerUser, verifyUser, removeToken } from './services/auth';
 
+
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
 
@@ -23,13 +24,13 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/user');
   };
 
   const handleRegister = async (registerData) => {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/user');
   };
   
   const handleLogout = () => {

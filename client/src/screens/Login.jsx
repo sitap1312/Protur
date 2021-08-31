@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import './Login.css';
 
 function Login(props) {
   const [formData, setFormData] = useState({
@@ -19,27 +20,35 @@ function Login(props) {
   };
 
   return (
-    <form onSubmit={(e) => { e.preventDefault(); handleLogin(formData); }}>
-      <h3>Login</h3>
+    <section className="sign-page">
+      <div className="sign-form">
+        <div className="sign-title">WELCOME BACK!</div>
+        <br />
+        <br />
+        <form onSubmit={(e) => { e.preventDefault(); handleLogin(formData); }}>
 
-      <label>
-        Username:
-        <input type='text' name='username' value={formData.username} onChange={handleChange} />
-      </label>
+          <input className="sign-input" type='text' name='username' value={formData.username} onChange={handleChange} placeholder="username" />
+          <br />
+          <br />
 
-      <br />
+          <input className="sign-input" type='password' name='password' value={formData.password} onChange={handleChange} placeholder="🔐 ••••••••••••" />
+          <br />
+          <br />
 
-      <label>
-        Password:
-        <input type='password' name='password' value={formData.password} onChange={handleChange} />
-      </label>
+          <div>
+            <button className="sign-btn" type="submit">LOGIN</button>
+          </div>
+          <br />
+          <br />
 
-      <br />
+          <div className="sign-text"> Do not have an Account?
+          <Link to='/register' className="sign-link" > Register</Link>
+          </div>
 
-      <Link to='/register'>Register</Link>
-      
-      <button>Submit</button>
-    </form>
+        </form>
+      </div>
+    </section>
+    
   )
 };
 
