@@ -5,7 +5,6 @@ const baseUrl =
     ? "https://protur-api.herokuapp.com/" 
     : "http://localhost:3000";
 
-
 const api = axios.create({
   baseURL: baseUrl,
 });
