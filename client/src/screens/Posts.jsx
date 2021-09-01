@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SyncLoader from "react-spinners/SyncLoader";
+// import SyncLoader from "react-spinners/SyncLoader";
 import './Posts.css';
 
 
 function Posts(props) {
   const { posts } = props;
 
-  if (posts.length === 0) {
-    return <SyncLoader />;
-    // return <ClockLoader />;
-  }
+  // if (posts.length === 0) {
+  //   return <SyncLoader />;
+  //   // return <ClockLoader />;
+  // }
 
   return (
     <div>
