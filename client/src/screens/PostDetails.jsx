@@ -68,16 +68,16 @@ function PostDetails(props) {
       <section>
         <p style={{color: "chocolate"}}>Comments</p>
       <div className="comm-dsply">
-          
+        <ul>
+          <li>
           {post?.comments.map((comment) => (
-            <ul>
-              <li>
-                <p key={comment.id} style={{color: "white"}}>
-                  {currentUser?.username}:
-                  {comment.content}</p>
-              </li>
-            </ul>
+            <p key={comment.id} style={{color: "white"}}>
+              {currentUser?.username}:
+              {comment.content}
+            </p>
           ))}
+          </li>
+        </ul>
         </div>
 
         <div>

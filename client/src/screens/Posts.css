@@ -75,3 +75,22 @@
   flex-direction: row-reverse;
   margin-right: 5%;
 }
+
+
+@media (max-width: 650px) {
+  .new-post {
+    display: flex;
+    justify-content: center;
+  }
+
+  .post-img {
+    height: 35vh;
+    width: 70vw;
+    border-radius: 30%;
+  }
+
+  .posts {
+    margin: 5%;
+    margin-bottom: 10%;
+  }
+}

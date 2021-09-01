@@ -68,7 +68,7 @@ function MainContainer(props) {
         </Switch>
 
         <Route exact path='/'>
-          <div>
+          <div className="main-logo">
             <img src={Logo} alt="applogo"/>
           </div>
         </Route>

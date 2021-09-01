@@ -5,7 +5,6 @@
   align-self: flex-start;
   align-items: center;
   box-sizing: border-box;
-  /* margin-top: -7%; */
   min-height: 100vh;
 }
 
@@ -59,4 +58,18 @@
 .edit-btn:hover {
   background: rgb(247, 141, 43);
   color: black;
+}
+
+@media (max-width: 650px) {
+  .edit-input {
+    border: 1px solid rgb(247, 141, 43);
+    border-radius: 5px;
+  }
+
+  .edit-form {
+    height: auto;
+    width: 65vw;
+
+    /* margin-top: 0; */
+  }
 }

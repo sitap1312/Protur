@@ -59,3 +59,9 @@
   background: rgb(247, 141, 43);
   color: black;
 }
+
+@media (max-width: 650px) {
+  .comment-input {
+    border-radius: 5px;
+  }
+}

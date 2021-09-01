@@ -82,3 +82,42 @@ h3 {
 }
 
 
+@media screen and (max-width: 650px) {
+  .main-cont {
+    height: auto;
+  }
+
+  .footer {
+    font-size: small;
+  }
+
+  .footer a {
+    font-size: small;
+  }
+
+  div#slider { 
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    border: chocolate 1px solid;
+    border-radius: 20px;
+  }
+
+  div#slider figure img { 
+    width: 20%;
+    height: 300px; 
+    float: left; 
+  }
+
+  .explr-btn {
+    width: auto;
+  }
+
+  .main-logo {
+    margin-top: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+

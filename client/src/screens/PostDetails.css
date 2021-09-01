@@ -62,3 +62,20 @@
   background: rgb(247, 141, 43);
   color: black;
 }
+
+@media (max-width: 650px) {
+  .post-img-det img {
+    height: 40vh;
+    width: 70vw;
+  }
+
+  .UD-btn {
+    height: auto;
+    width: auto;
+    font-size: samll;
+  }
+
+  h3 {
+    font-size: medium;
+  }
+}

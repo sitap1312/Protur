@@ -64,3 +64,28 @@
   flex-direction: row;
   margin-left: 5%;
 }
+
+
+@media (max-width: 650px) {
+  .main-title{
+    justify-content: center;
+  }
+
+  .user-log{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
+
+  .tour-feed {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .main-log{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: larger;
+  }
+}
