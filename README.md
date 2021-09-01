@@ -109,29 +109,29 @@ src
 |Aug 26| Core Application Structure | Complete
 |Aug 27| Actual code | Complete
 |Aug 28| MVP  | Complete
-|Aug 29| CSS Styling | In-Complete
-|Aug 30| PMVP and advance styling  | In-Complete
-|Aug 31| Advance Styling, PMVP| In-Complete
-|Sep 01| Presentations | In-Complete
+|Aug 29| CSS Styling | Complete
+|Aug 30| PMVP and advance styling  | Complete
+|Aug 31| Advance Styling, PMVP| Partial
+|Sep 01| Presentations | Complete
 
 
 ## Timeframes
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Working with Backend Ruby-Rails | H | 3hrs| hrs | hrs |
-| Working with frontend React | H | 5hrs | hrs | hrs |
-| CRUD Backend | H | 3hrs | hrs | hrs |
-| CRUD Frontend | H | 5hrs | hrs | hrs |
-| Creating basic structure| H | 3hrs| hrs | hrs |
-| Components | H | 3hrs | hrs | hrs |
-| Navigations | H | 3hrs | hrs | hrs |
-| CSS Styling | H | 6hrs | hrs | hrs |
-| Responsive web desiging | H | 5hrs | hrs | hrs |
-| Advance CSS Styling | H | 6hrs | hrs | hrs |
-| PMVP Styling | H | 3hr | hrs | hrs |
-| Review of Functionality | H | 3hrs | hrs | hrs |
-| Total | H | 48hrs| hrs | hrs |
+| Working with Backend Ruby-Rails | H | 3hrs| 3hrs | 3hrs |
+| Working with frontend React | H | 5hrs | 6hrs | 6hrs |
+| CRUD Backend | H | 3hrs | 2hrs | 2hrs |
+| CRUD Frontend | H | 5hrs | 4hrs | 4hrs |
+| Creating basic structure| H | 3hrs| 2hrs | 2hrs |
+| Components | H | 3hrs | 4hrs | 4hrs |
+| Navigations | H | 3hrs | 2hrs | 2hrs |
+| CSS Styling | H | 6hrs | 7hrs | 7hrs |
+| Responsive web desiging | H | 5hrs | 5hrs | 5hrs |
+| Advance CSS Styling | H | 6hrs | 3hrs | 3hrs |
+| PMVP Styling | H | 3hr | 1hrs | 1hrs |
+| Review of Functionality | H | 3hrs | 2hrs | 2hrs |
+| Total | H | 48hrs| 41hrs | 41hrs |
 
 
 
