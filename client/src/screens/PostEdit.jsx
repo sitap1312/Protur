@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './PostEdit.css';
 
 function PostEdit(props) {
   const [postForm, setPostForm] = useState({
@@ -29,33 +30,44 @@ function PostEdit(props) {
   };
 
   return (
-    <form onSubmit={(e) => { e.preventDefault(); handleUpdate(id, postForm); }}>
-      <label>
-        PlaceName:
-        <input type='text' name='placename' value={postForm.placename} onChange={handleChange} />
-      </label>
+    <section className="edit-page">
+      <div className="edit-form">
+        <div className="edit-title">EDIT FEED!</div>
+        <br />
+        <br />
+          <form onSubmit={(e) => { e.preventDefault(); handleUpdate(id, postForm); }}>
+            <label className="edit-lable">
+            PlaceName
+            <br />
+              <input className="edit-input" type='text' name='placename' value={postForm.placename} onChange={handleChange} />
+            </label>
 
-      <br />
+            <br />
 
-      <label>
-        Image URL:
-        <input type='url' name='img_url' value={postForm.img_url} onChange={handleChange} />
-      </label>
+            <label className="edit-lable">
+            Image URL
+            <br />
+              <input className="edit-input" type='url' name='img_url' value={postForm.img_url} onChange={handleChange} />
+            </label>
 
-      <br />
+            <br />
 
-      <label>
-        Description:
-        <textarea rows="5" cols="50" name="description" value={postForm.description} onChange={handleChange}>
-          Description...
-        </textarea>
-      </label>
+            <label className="edit-lable">
+            Description
+            <br />
+              <textarea className="edit-input" rows="5" cols="50" name="description" value={postForm.description} onChange={handleChange}>
+                Description...
+              </textarea>
+            </label>
 
-      <br />
+          <br />
+          <br />
 
-      <button>Submit</button>
-      
-    </form>
+            <button className="edit-btn">UPDATE</button>
+            
+          </form>
+      </div>
+    </section>
   )
 };
 

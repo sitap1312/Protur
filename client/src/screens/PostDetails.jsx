@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getOnePost } from '../services/posts';
-import { createComments, getAllComments } from '../services/comments';
+import { createComments } from '../services/comments';
 import CommentsCreate from '../components/CommentsCreate';
 import './PostDetails.css';
 
 
 function PostDetails(props) {
   const [post, setPost] = useState(null);
-  const [ postComments, setPostComments ] = useState('');
 
   const { id } = useParams();
   const { currentUser, handleDelete } = props;
@@ -21,14 +20,6 @@ function PostDetails(props) {
     fetchPost();
   }, [id]);
 
-  useEffect(() => {
-    const fetchComment = async () => {
-      const commentsData = await getAllComments();
-      setPostComments(commentsData);
-    };
-    fetchComment();
-  }, []);
-
   const handleCommentCreate = async (commentData) => {
     const newComment = await createComments(id, commentData);
     setPost((prevState) => ({
@@ -39,27 +30,62 @@ function PostDetails(props) {
 
   return (
     <div>
-      <div>
-        <h3>{post?.placename}</h3>
-        <img src={post?.img_url} alt={post?.placename}/>
-        <p>{post?.description}</p>
 
-        {currentUser?.id === post?.user_id && (
-            <div>
-              <Link to={`/posts/${post?.id}/edit`}>
-                <button>Edit Post</button>
-              </Link>
+      <section className="post-det-sec">
+        <div className="post-content-det">
+          <div className="post-title-det">{post?.placename}</div>
+          <br />
+          <div className="post-img-det">
+            <img src={post?.img_url} alt={post?.placename}/>
+          </div>
+          
+          <br />
+          <br />
+          <div className="post-det-des">
+            <h3>Description: </h3>
+            {post?.description}
+          </div>
+        </div>
+        <br />
+        <br />
+        <section>
+          {currentUser?.id === post?.user_id && (
+              <div className="post-UD">
+                <Link to={`/posts/${post?.id}/edit`}>
+                  <button className="UD-btn">Edit Post</button>
+                </Link>
 
-              <button onClick={() => handleDelete(post.id)}>Delete Post</button>
-            </div>
+                <button className="UD-btn" onClick={() => handleDelete(post.id)}>Delete Post</button>
+              </div>
           )}
-      </div>
-      <div>
-        {post?.comments.map((comment) => (
-          <p key={comment.id}>{ comment.content }</p>
-        ))}
-      </div>
-      <CommentsCreate handleCommentCreate={handleCommentCreate} />
+        </section>
+
+      </section>
+
+      <br />
+      <br />
+
+      <section>
+        <p style={{color: "chocolate"}}>Comments</p>
+      <div className="comm-dsply">
+          
+          {post?.comments.map((comment) => (
+            <ul>
+              <li>
+                <p key={comment.id} style={{color: "white"}}>
+                  {currentUser?.username}:
+                  {comment.content}</p>
+              </li>
+            </ul>
+          ))}
+        </div>
+
+        <div>
+          <CommentsCreate handleCommentCreate={handleCommentCreate} />
+        </div>
+
+      </section>
+
     </div>
   )
 };

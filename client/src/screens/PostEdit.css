@@ -1,0 +1,62 @@
+.edit-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  /* margin-top: -7%; */
+  min-height: 100vh;
+}
+
+.edit-form {
+  border: rgb(247, 141, 43) 1px solid;
+  box-shadow: 0 0 250px rgb(247, 141, 43);
+  text-align: center;
+  padding: 2rem 2rem;
+  width: 40vw;
+  border-radius: 30px;
+  margin: auto;
+  /* margin-top: 0; */
+}
+
+.edit-title {
+  color: rgb(247, 141, 43);
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.edit-input {
+  border: 1px solid rgb(247, 141, 43);
+  border-radius: 999px;
+  text-align: center;
+  width: 70%;
+  height: auto;
+  background-size: 1.5rem;
+  background-position: 1rem 50%;
+  padding: 0.5rem 1rem;
+  color: white;
+  margin-bottom: 15px;
+  font-size: large;
+}
+
+.edit-lable {
+  color: chocolate;
+  font-size: large;
+  font-weight: bold;
+}
+
+.edit-btn {
+  background: linear-gradient(90deg, rgb(240, 182, 141) 15%, chocolate 100%);
+  height: 35px;
+  width: 100px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.edit-btn:hover {
+  background: rgb(247, 141, 43);
+  color: black;
+}

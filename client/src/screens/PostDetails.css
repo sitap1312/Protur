@@ -1,0 +1,64 @@
+.postdetails-sec {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-content-det {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: chocolate;
+  /* color: white; */
+}
+
+.post-title-det {
+  font-size: larger;
+  font-weight: bolder;
+  color: chocolate;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif  ;
+}
+
+.post-img-det img {
+  height: 80vh;
+  width: 60vw;
+  border-radius: 10%;
+  border: solid 1px chocolate;
+  box-shadow: 5px 5px 25px 15px rgb(247, 194, 145);
+}
+
+.post-det-des {
+  height: auto;
+  width: 50vw;
+  margin: auto;
+  color: white;
+  font-size: large;
+  /* color: chocolate; */
+}
+
+.comm-dsply {
+  border: rgb(80, 79, 79) 2px solid;
+  height: auto;
+  width: 60vw;
+  margin: auto;
+  color: chocolate;
+}
+
+.post-UD {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.UD-btn {
+  background: linear-gradient(90deg, rgb(240, 182, 141) 15%, chocolate 100%);
+  height: 35px;
+  width: 100px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.UD-btn:hover {
+  background: rgb(247, 141, 43);
+  color: black;
+}

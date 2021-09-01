@@ -16,9 +16,9 @@
   text-align: center;
   padding: 2rem 2rem;
   width: 400px;
-  /* margin: 4%; */
   border-radius: 30px;
   margin: auto;
+  /* margin-top: 0; */
 }
 
 .sign-btn {

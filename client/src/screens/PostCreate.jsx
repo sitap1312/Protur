@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './PostEdit.css';
 
 function PostCreate(props) {
   const [postForm, setPostForm] = useState({
@@ -19,33 +20,43 @@ function PostCreate(props) {
 
 
   return (
-    <form onSubmit={(e) => { e.preventDefault(); handleCreate(postForm); }} >
-      <h3>Create New Post</h3>
-      <label>
-        PlaceName:
-        <input type='text' name='placename' value={placename} onChange={handleChange} />
-      </label>
+    <section className="edit-page">
+      <div className="edit-form">
+        <div className="edit-title">NEW POST</div>
+        <br />
+        <br />
+          <form onSubmit={(e) => { e.preventDefault(); handleCreate(postForm); }} >
+            <label className="edit-lable">
+            PlaceName
+            <br />
+              <input className="edit-input" type='text' name='placename' value={placename} onChange={handleChange} placeholder="Place Name"/>
+            </label>
 
-      <br />
+            <br />
 
-      <label>
-        ImageURL:
-        <input type='url' name='img_url' value={img_url} onChange={handleChange} />
-      </label>
+            <label className="edit-lable">
+            ImageURL
+            <br />
+              <input className="edit-input" type='url' name='img_url' value={img_url} onChange={handleChange} placeholder="Image URL"/>
+            </label>
 
-      <br />
+            <br />
 
-      <label>
-        Description:
-        <textarea rows="5" cols="50" name="description" value={description} onChange={handleChange}>
-          Description...
-        </textarea>
-      </label>
+            <label className="edit-lable">
+            Description
+            <br />
+              <textarea className="edit-input" rows="5" cols="50" name="description" value={description} onChange={handleChange} placeholder="Description...">
+                Description...
+              </textarea>
+            </label>
 
-      <br />
+          <br />
+          <br />
 
-      <button>Submit</button>
-    </form>
+            <button className="edit-btn">POST</button>
+          </form>
+        </div>
+    </section>
   )
 };
 

@@ -30,14 +30,16 @@ function Layout(props) {
           
       )} 
       <hr />
-      
-      {currentUser && (
-      
+      <div className="tour-feed">
+        {currentUser && (
+        
         <Link to='/posts'>
           <h2>Tours Feed</h2>
         </Link>
         
       )}
+      </div>
+      
           {props.children}
       
     </header>
